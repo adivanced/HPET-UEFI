@@ -4,7 +4,7 @@ A simple baremetal app, that demonstrates the work of the HPET timer in the UEFI
 ## Building and running
 ```make``` to build.  
 ```make qemu``` to run and already built app in the qemu.  
-In order to run in on the real hardware, create a EFI bootable USB and replace it`s BOOTX64.EFI and startup.nsh with the ones, found in the bootdrv folder after you build the app.  
+In order to run in on the real hardware, create a EFI bootable USB and replace it's BOOTX64.EFI and startup.nsh with the ones, found in the bootdrv folder after you build the app.  
 
 ## Project contents
 ### main.asm
@@ -23,7 +23,7 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
 ### HPET.inc
   Contains the ```get_ACPI_HPET_BAR``` function. returns the HPET ACPI table base address.
 ### HPET_driver_generic.inc
-  Contains the ```init_hpet``` function. Configures the N`th HPET timer into the periodic mode, with the given frequency. Binds the HPET ticks to a given interrupt vector, that is bound to the given interrupt number.  
+  Contains the ```init_hpet``` function. Configures the N'th HPET timer into the periodic mode, with the given frequency. Binds the HPET ticks to a given interrupt vector, that is bound to the given interrupt number.  
   If possible, function routes the interrupt through the FSB routing mechanism. Otherwise, it uses the IOAPIC routing.
   #### Possible return values:
     0 - HPET successfully configured, used the FSB routing mechanism.  
