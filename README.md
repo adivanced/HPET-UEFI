@@ -26,6 +26,7 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
   
 ### HPET.inc
   Contains the ```get_ACPI_HPET_BAR``` function. returns the HPET ACPI table base address.
+  
 ### HPET_driver_generic.inc
   Contains the ```init_hpet``` function. Configures the N'th HPET timer into the periodic mode, with the given frequency. Binds the HPET ticks to a given interrupt vector, that is bound to the given interrupt number.  
   If possible, function routes the interrupt through the FSB routing mechanism. Otherwise, it uses the IOAPIC routing.
@@ -57,9 +58,9 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
 ### apic.inc
   Contains the ```conf_LAPIC``` function. Reads and stores the LAPIC base address, Enables external interrupts, Non-maskable interrupts, sets task priority to 0.  
 
-### cvt2hex.inc
-  Contains the ```cvt2hex``` function. A simple unsigned integer to hexadecimal string coversion function.  
-
 ### ioapic.inc
   Contains the ```get_ioapic_id_offs``` and ```disable_PIC``` functions. 
   ```get_ioapic_id_offs``` returns the IOAPIC base address and the offset to its IOREDTBL, corresponding to the given interrupt number.  
+
+### cvt2hex.inc
+  Contains the ```cvt2hex``` function. A simple unsigned integer to hexadecimal string coversion function.  
