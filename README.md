@@ -13,7 +13,7 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
   Get the MADT ACPI table base address.  
   Configure Local APIC.  
   Disable legacy PIC.  
-  Print "start!" again to indicate that the app is running okay. 
+  Print "start!" again to indicate that the app is running okay.  
   Initialize HPET: bind it to the 0x22 interrupt of the IDT, use the ```intfunc``` as the interrupt vector, set HPET to tick periodically every millisecond.  
   Print the return value of the ```init_hpet``` function.  
   Print the current time counter value (in milliseconds).  
