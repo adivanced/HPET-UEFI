@@ -51,6 +51,10 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
     3 - Failed to locate the MADT ACPI table.  
     
 ### apic.inc
+  Contains the ```conf_LAPIC``` function. Reads and stores the LAPIC base address, Enables external interrupts, Non-maskable interrupts, sets task priority to 0.  
+
 ### cvt2hex.inc
+  Contains the ```cvt2hex``` function. A simple unsigned integer to hexadecimal string coversion function.  
+
 ### ioapic.inc
 ### jd9999_hdr_macro.inc
