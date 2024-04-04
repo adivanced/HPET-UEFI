@@ -57,4 +57,8 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
   Contains the ```cvt2hex``` function. A simple unsigned integer to hexadecimal string coversion function.  
 
 ### ioapic.inc
+  Contains the ```get_ioapic_id_offs``` and ```disable_PIC``` functions. 
+  ```get_ioapic_id_offs``` returns the IOAPIC base address and the offset to its IOREDTBL, corresponding to the given interrupt number.  
+
 ### jd9999_hdr_macro.inc
+  Contains a macro, based on JD9999's implementation of the UEFI PE header.
