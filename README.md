@@ -43,6 +43,13 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
     -1 - Gate N is out of range.
     
 ### MADT.inc
+  Contains the ```get_MADT_BAR``` function. Finds and stores the base address of ACPI MADT table in the .data section, and returns it in rax. 
+  #### Possible return values:
+    MADT BAR - successfully found and returned the MADT base address.
+    1 - Failed to locate the RSDP (Root System Description Pointer).  
+    2 - Failed to locate the XSDT ACPI table.  
+    3 - Failed to locate the MADT ACPI table.  
+    
 ### apic.inc
 ### cvt2hex.inc
 ### ioapic.inc
