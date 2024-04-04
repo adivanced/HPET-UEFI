@@ -149,4 +149,4 @@ mov rax, -6
 ret
 .var10pow15 dq 1000000000000000
 
-%include "../HPET/HPET.inc"
+%include "HPET.inc"
