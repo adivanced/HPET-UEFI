@@ -39,8 +39,8 @@ get_MADT_BAR:
 	mov rcx, qword [RSDP]
 	mov rcx, qword [rcx+24]
 	mov qword [XSDT], rcx
-	cmp dword [rcx], 'TDSX'
-	jz .end_2
+	cmp dword [rcx], 'XSDT'
+	jnz .end_2
 
 	.have_XSDT:
 
