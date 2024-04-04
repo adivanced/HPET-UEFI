@@ -20,8 +20,21 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
   Sleep for 3000 milliseconds.  
   Print the current time counter value (in milliseconds).  
   Stall indefinitely.  
-### HPET_driver_generic.inc
 ### HPET.inc
+  Contains the ```get_ACPI_HPET_BAR``` function. returns the HPET ACPI table base address.
+### HPET_driver_generic.inc
+  Contains the ```init_hpet``` function. Configures the N`th HPET timer into the periodic mode, with the given frequency. Binds the HPET ticks to a given interrupt vector, that is bound to the given interrupt number.  
+  If possible, function routes the interrupt through the FSB routing mechanism. Otherwise, it uses the IOAPIC routing.
+  #### Possible return values:
+    0 - HPET successfully configured, used the FSB routing mechanism.  
+    1 - HPET successfully configured, used the IOAPIC routing mechanism.  
+    -1 - Failed to locate the RSDP (Root System Description Pointer).  
+    -2 - Failed to locate the XSDT ACPI table.  
+    -3 - Failed to locate the HPET ACPI table.  
+    -4 - Desired frequency is not implemented in hardware.  
+    -5 - Comparator width is 32-bit, but 64-bits needed to implement the desired frequency.  
+    -6 - Selected timer has no periodic mode.  
+
 ### IDT.inc
 ### MADT.inc
 ### apic.inc
