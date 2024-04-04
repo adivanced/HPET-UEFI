@@ -20,6 +20,10 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
   Sleep for 3000 milliseconds.  
   Print the current time counter value (in milliseconds).  
   Stall indefinitely.  
+
+### jd9999_hdr_macro.inc
+  Contains a macro, based on JD9999's implementation of the UEFI PE header.
+  
 ### HPET.inc
   Contains the ```get_ACPI_HPET_BAR``` function. returns the HPET ACPI table base address.
 ### HPET_driver_generic.inc
@@ -59,6 +63,3 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
 ### ioapic.inc
   Contains the ```get_ioapic_id_offs``` and ```disable_PIC``` functions. 
   ```get_ioapic_id_offs``` returns the IOAPIC base address and the offset to its IOREDTBL, corresponding to the given interrupt number.  
-
-### jd9999_hdr_macro.inc
-  Contains a macro, based on JD9999's implementation of the UEFI PE header.
