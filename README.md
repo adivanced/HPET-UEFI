@@ -1,6 +1,9 @@
 # HPET-UEFI
 A simple baremetal app, that demonstrates the work of the HPET timer in the UEFI enviroment.
 
+## Project goals
+  The goal of the project is to demonstrate a bare-metal assembly example of using the HPET timer in the UEFI enviroment, and to give a simplistic example timer API, that can be used in bare-metal UEFI assembly application development. 
+
 ## Building and running
 ```make``` to build.  
 ```make qemu``` to run and already built app in the qemu.  
