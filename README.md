@@ -36,7 +36,7 @@ In order to run in on the real hardware, create a EFI bootable USB and replace i
     -6 - Selected timer has no periodic mode.  
 
 ### IDT.inc
-  Contains the functions ```write_IDT_gate``` and ```read_IDT_gate```, needed for binding your function to the N`th interrupt vector, and for getting the current function, bound to the N`th interrupt vector respectively.  
+  Contains the functions ```write_IDT_gate``` and ```read_IDT_gate```, needed for binding your function to the N'th interrupt vector, and for getting the current function, bound to the N'th interrupt vector respectively.  
   The HPET driver needs only the ```write_IDT_gate``` function.  
   ### Possible return values:
     0 - Successfully bound the ISR to the selected gate.
