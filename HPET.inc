@@ -30,8 +30,8 @@ get_ACPI_HPET_BAR:
 
 	;mov rdi, qword [RSDP]
 	mov rdi, qword [rdi+24]
-	cmp dword [rdi], 'TDSX'
-	jz .end_2
+	cmp dword [rdi], 'XSDT'
+	jnz .end_2
 
 	;mov qword [XSDT], rdi
 
