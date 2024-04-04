@@ -1,7 +1,7 @@
 [BITS 64]
 [DEFAULT REL]
 
-%include "../jd9999_hdr_macro.inc"
+%include "jd9999_hdr_macro.inc"
 jd9999_hdr_macro textsize, datasize, 0x0, textsize+datasize+1024
 
 %macro print 1
@@ -99,11 +99,11 @@ start:
 
 
 	%include "HPET_driver_generic.inc"
-	%include "../MADT/MADT.inc"
-	%include "../ioapic/ioapic.inc"
-	%include "../apic/apic.inc"
-	%include "../IDT/IDT.inc"	
-	%include "../cvt2hex/cvt2hex.inc"
+	%include "MADT.inc"
+	%include "ioapic.inc"
+	%include "apic.inc"
+	%include "IDT.inc"	
+	%include "cvt2hex.inc"
 
 
 times 2048 - ($-$$) db 0 ;alignment
